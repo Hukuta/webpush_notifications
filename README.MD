@@ -1,4 +1,4 @@
-Production-ready example of using [web-push-php](https://github.com/web-push-libs/web-push-php)
+Production-ready example of using [web-push-php](https://github.com/Hukuta/webpush_notifications/raw/master/screen.png)
 
 ![Screen](https://github.com/Hukuta/webpush_notifications/screen.png)
 
@@ -6,7 +6,7 @@ Production-ready example of using [web-push-php](https://github.com/web-push-lib
 
 ## Requirements
 * PHP 7.0+ with `gmp`, `mbstring`, `curl`, `openssl`!
-* [composer.phar](https://github.com/Hukuta/webpush_notifications/raw/master/screen.png)
+* [composer.phar](https://getcomposer.org/download/)
 * mySQL
 * crontab
 
