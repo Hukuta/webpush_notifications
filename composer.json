@@ -1,0 +1,6 @@
+{
+    "require": {
+        "minishlink/web-push": "^2.0",
+        "mobiledetect/mobiledetectlib": "^2.8"
+    }
+}
