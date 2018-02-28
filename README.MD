@@ -1,6 +1,6 @@
-Production-ready example of using [web-push-php](https://github.com/Hukuta/webpush_notifications/raw/master/screen.png)
+Production-ready example of using [web-push-php](https://github.com/web-push-libs/web-push-php)
 
-![Screen](https://github.com/Hukuta/webpush_notifications/screen.png)
+![Screen](https://github.com/Hukuta/webpush_notifications/raw/master/screen.png)
 
 ### Setup
 
