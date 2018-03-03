@@ -3,18 +3,15 @@ self.addEventListener('push', function (event) {
         return;
     }
 
-    self.addEventListener('notificationclick', function(e) {
-        var notification = e.notification;
-        clients.openWindow(notification.data.click_url);
-        notification.close();
-    });
-
-    const sendNotification = body => {
-        // you could refresh a notification badge here with postMessage API
-        // const title = "Web Push example";
-
+    const sendNotification = function (body) {
         body = JSON.parse(body);
 
+        if (!body.title) {
+            return (new Promise(function (resolve, reject) {
+                // you can do some staff here
+                resolve();
+            }));
+        }
         return self.registration.showNotification(body.title, body);
     };
 
@@ -22,4 +19,10 @@ self.addEventListener('push', function (event) {
         const message = event.data.text();
         event.waitUntil(sendNotification(message));
     }
+});
+
+self.addEventListener('notificationclick', function(e) {
+    var notification = e.notification;
+    clients.openWindow(notification.data.click_url);
+    notification.close();
 });
