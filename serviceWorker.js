@@ -23,6 +23,7 @@ self.addEventListener('push', function (event) {
 
 self.addEventListener('notificationclick', function(e) {
     var notification = e.notification;
-    clients.openWindow(notification.data.click_url);
+    if (notification.data && notification.data.click_url)
+        clients.openWindow(notification.data.click_url);
     notification.close();
 });
