@@ -49,3 +49,5 @@ switch ($method) {
         echo "Error: method not handled";
         return;
 }
+
+mysqli_close($db_link);
