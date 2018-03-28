@@ -111,7 +111,7 @@ if (flock($fp, LOCK_EX | LOCK_NB)) { // do an exclusive lock
             }
             if ($num_rows < $limit) {
                 mysqli_query($db_link, 'UPDATE `pushtask` SET `status`="4" WHERE `id`="' . $task['id'] . '"');
-                mysqli_query($db_link, 'DELETE FROM `tasks_users` WHERE `task_id`="' . $task['id'] . '"');
+                mysqli_query($db_link, 'DELETE LOW_PRIORITY FROM `tasks_users` WHERE `task_id`="' . $task['id'] . '"');
             }
         }
     }
